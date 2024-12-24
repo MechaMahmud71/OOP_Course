@@ -6,6 +6,7 @@ const mahmudAccount = new account_entity_1.BankAccount("Mahmud", "mahmud123", 20
 // Faruk Account
 farukAccount.deposit(100); //1100
 farukAccount.withdraw(200); //900
+farukAccount.deposit(-100);
 //Mahmud Account
 mahmudAccount.deposit(100); //2100
 mahmudAccount.withdraw(200); //1900

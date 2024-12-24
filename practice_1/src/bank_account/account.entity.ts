@@ -36,7 +36,7 @@ export class BankAccount{
 
   public transfer(bankAccount: BankAccount, amount: number) {
     this.checkAmountIsValid(amount);
-    this.balance = this.balance - amount;
+    this.withdraw(amount);
     bankAccount.deposit(amount);
     console.log("You have transferred " + amount + " to " + bankAccount.number + " account.");
     console.log("Your Current Balance is " + this.balance);
