@@ -29,7 +29,10 @@ export class BankAccount{
 
   public withdraw(amount:number) {
     this.checkAmountIsValid(amount);
-    this.balance = this.balance - amount;
+    if (this.balance - amount <= 0) {
+      throw new Error("Invalid Operation. Not sufficient balance to withdraw")
+    }
+    this.balance=this.balance - amount;
     console.log("The Withdraw amount is " + amount);
     console.log("Your Current Balance is " + this.balance);
   }
