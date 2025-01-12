@@ -7,7 +7,7 @@ export class Truck extends Vehicle {
     super(brand, model, manufactureYear)
   }
 
-  rent(startDate: Date, endDate: Date): number {
+  public override rent(startDate: Date, endDate: Date): number {
     const totalCost = super.rent(startDate, endDate);
     const maintenanceFee = Math.abs(startDate.getDate() - endDate.getDate()) * this.MAINTENANCE_FEE_PER_DAY;
     return totalCost + maintenanceFee;

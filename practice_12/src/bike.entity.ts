@@ -8,7 +8,7 @@ export class Bike extends Vehicle {
     super(brand, model, manufactureYear)
   }
 
-  rent(startDate: Date, endDate: Date) {
+  public override rent(startDate: Date, endDate: Date) {
     const rentalPeriodInDays = Math.abs(startDate.getTime() - endDate.getTime()) / (1000 * 60 * 60 * 24);
     const totalCost = super.rent(startDate, endDate);
     let discount = 0;

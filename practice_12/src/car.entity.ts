@@ -13,7 +13,7 @@ export class Car extends Vehicle {
     return currentYear - Number(this.manufactureYear);
   }
 
-  rent(startDate: Date, endDate: Date) {
+  public override rent(startDate: Date, endDate: Date) {
     const totalCost = super.rent(startDate, endDate);
     let discount = 0;
     const age = this.calculateAge();
