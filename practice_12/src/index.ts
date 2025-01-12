@@ -1,6 +1,6 @@
 import { Bike } from "./bike.entity";
 import { Car } from "./car.entity";
-import { Truck } from "./track.entity";
+import { Truck } from "./truck.entity";
 
 const truck = new Truck('Toyota', 'Corolla', '2020'); // Create a new truck object
 const rentalCost = truck.rent(new Date(2023, 0, 1), new Date(2023, 0, 5)); // Rent the truck for 5 days
